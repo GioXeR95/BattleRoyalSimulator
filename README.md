@@ -35,7 +35,7 @@ The stats can be incresed with Items.
 
 An Item will be defined with:
 - Name
-- Type (*)
+- Type
 - Increment
 - Description (?)
 
