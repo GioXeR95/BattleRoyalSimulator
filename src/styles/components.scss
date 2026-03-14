@@ -1,19 +1,15 @@
 @use './variables' as *;
 
 @layer components {
-  .btn-primary {
-    background: $primary;
-  }
-
   .counter {
     font-size: 16px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: radius(xs);
     color: var(--accent);
     background: var(--accent-bg);
     border: 2px solid transparent;
-    transition: border-color 0.3s;
-    margin-bottom: 24px;
+    transition: border-color duration(normal);
+    margin-bottom: space(6);
 
     &:hover {
       border-color: var(--accent-border);
@@ -38,7 +34,7 @@
     .base {
       width: 170px;
       position: relative;
-      z-index: 0;
+      z-index: z(base);
     }
 
     .framework,
@@ -47,7 +43,7 @@
     }
 
     .framework {
-      z-index: 1;
+      z-index: z(raised);
       top: 34px;
       height: 28px;
       transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
@@ -55,7 +51,7 @@
     }
 
     .vite {
-      z-index: 0;
+      z-index: z(base);
       top: 107px;
       height: 26px;
       width: auto;
@@ -72,8 +68,8 @@
     place-items: center;
     flex-grow: 1;
 
-    @media (max-width: 1024px) {
-      padding: 32px 20px 24px;
+    @include down(lg) {
+      padding: space(8) space(5) space(6);
       gap: 18px;
     }
   }
@@ -85,10 +81,10 @@
 
     & > div {
       flex: 1 1 0;
-      padding: 32px;
+      padding: space(8);
 
-      @media (max-width: 1024px) {
-        padding: 24px 20px;
+      @include down(lg) {
+        padding: space(6) space(5);
       }
     }
 
@@ -98,7 +94,7 @@
       height: 22px;
     }
 
-    @media (max-width: 1024px) {
+    @include down(lg) {
       flex-direction: column;
       text-align: center;
     }
@@ -107,7 +103,7 @@
   #docs {
     border-right: 1px solid var(--border);
 
-    @media (max-width: 1024px) {
+    @include down(lg) {
       border-right: none;
       border-bottom: 1px solid var(--border);
     }
@@ -146,8 +142,8 @@
       }
     }
 
-    @media (max-width: 1024px) {
-      margin-top: 20px;
+    @include down(lg) {
+      margin-top: space(5);
       flex-wrap: wrap;
       justify-content: center;
 
@@ -167,8 +163,8 @@
     height: 88px;
     border-top: 1px solid var(--border);
 
-    @media (max-width: 1024px) {
-      height: 48px;
+    @include down(lg) {
+      height: space(12);
     }
   }
 

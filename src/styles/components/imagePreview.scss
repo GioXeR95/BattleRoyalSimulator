@@ -1,0 +1,10 @@
+// THIS IS AN EXAMPLE FILE OF A COMPONENT.
+// THIS FILE IS NOT USED IN THE APP
+// THIS FILE CAN BE DELETED IN THE FUTURE
+
+@use '../variables' as *;
+
+.image-preview {
+  border-radius: radius(md);
+  padding: space(4);
+}

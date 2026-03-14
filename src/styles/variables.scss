@@ -1,3 +1,71 @@
-// Template variables
+@use 'sass:map';
+
+// Static Sass tokens (compile-time)
 $primary: #4f46e5;
+
+$breakpoints: (
+	sm: 640px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+);
+
+$spacing: (
+	1: 4px,
+	2: 8px,
+	3: 12px,
+	4: 16px,
+	5: 20px,
+	6: 24px,
+	8: 32px,
+	12: 48px,
+);
+
+$radii: (
+	xs: 5px,
+	sm: 4px,
+	md: 6px,
+	lg: 10px,
+	pill: 9999px,
+);
+
+$durations: (
+	fast: 150ms,
+	normal: 300ms,
+	slow: 500ms,
+);
+
+$z-index: (
+	base: 0,
+	raised: 1,
+	overlay: 10,
+);
+
+@function space($step) {
+	@return map.get($spacing, $step);
+}
+
+@function radius($name) {
+	@return map.get($radii, $name);
+}
+
+@function duration($name) {
+	@return map.get($durations, $name);
+}
+
+@function z($name) {
+	@return map.get($z-index, $name);
+}
+
+@mixin down($breakpoint) {
+	$value: map.get($breakpoints, $breakpoint);
+
+	@if $value == null {
+		@error "Unknown breakpoint '#{$breakpoint}'.";
+	}
+
+	@media (max-width: $value) {
+		@content;
+	}
+}
 
