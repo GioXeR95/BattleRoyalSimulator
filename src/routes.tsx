@@ -1,4 +1,5 @@
 import { type RouteObject } from "react-router";
+import Playground from "./pages/Playground";
 
 const routes: RouteObject[] = [
   {
@@ -8,6 +9,10 @@ const routes: RouteObject[] = [
   {
     path: "/about",
     element: <div>"About Us"</div>,
+  },
+  {
+    path: "/playground",
+    element: <Playground />,
   }
 ];
 
