@@ -2,7 +2,9 @@
   "appName": "Battle Royal Simulator",
   "components": {
     "header": {
-      "home": "Home"
+      "home": "Home",
+      "themeLight": "Light",
+      "themeDark": "Dark"
     },
     "homePage": {
       "playerCard": {
