@@ -1,6 +1,6 @@
 import { BrowserRouter, useRoutes } from "react-router";
 import routes from "./routes.tsx";
-import { useTranslation } from "react-i18next";
+import { Header } from "./components/Header.tsx";
 
 // const THEME_STORAGE_KEY = "theme-preference";
 
@@ -24,7 +24,6 @@ const AppRoutes: React.FC = () => {
 // }
 
 function App() {
-  const { t } = useTranslation();
   // const [count, setCount] = useState(0);
   // const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
 
@@ -40,11 +39,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
-        <h1>{t("appName")}</h1>
-        <h2>{t("welcomeMessage")}</h2>
-      </div>
-
+      <Header />
       <AppRoutes />
     </BrowserRouter>
   );

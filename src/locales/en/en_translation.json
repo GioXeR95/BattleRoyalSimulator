@@ -1,4 +1,37 @@
 {
   "appName": "Battle Royal Simulator",
-  "welcomeMessage": "Welcome to the Battle Royal Simulator!"
+  "components": {
+    "header": {
+      "home": "Home"
+    },
+    "homePage": {
+      "playerCard": {
+        "genderOptions": {
+          "label": "Pick Gender",
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        },
+        "urlPhotoLabel": "Photo URL",
+        "nameLabel": "Name"
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "pageTitle": "Welcome to Battle Royal Simulator",
+      "playerCountLabel": "Number of Players",
+      "selectEngineLabel": "Select Game Universe",
+      "loadingGameEngines": "Loading game engines...",
+      "chooseEnginePlaceholder": "Choose a game engine...",
+      "uploadAJsonFile": "Or upload a custom game engine JSON file:",
+      "playerLabel": "Player {{number}}",
+      "alerts": {
+        "invalidJSONFile": "Invalid JSON file. Please check the console for details."
+      },
+      "buttons": {
+        "startGame": "Start Game"
+      }
+    }
+  }
 }
