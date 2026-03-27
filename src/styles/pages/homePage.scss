@@ -1,0 +1,37 @@
+.home-page {
+	padding: 2rem;
+}
+
+.home-page__engine-select {
+	padding: 0.5rem;
+	margin-right: 1rem;
+}
+
+.home-page__upload {
+	margin-top: 1rem;
+}
+
+.home-page__file-input {
+	margin-left: 0.5rem;
+}
+
+.home-page__start-button {
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+.home-page__players-section {
+	margin-top: 2rem;
+}
+
+.home-page__player-count-input {
+	margin-left: 0.5rem;
+	padding: 0.5rem;
+}
+
+.home-page__players-grid {
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1rem;
+}
